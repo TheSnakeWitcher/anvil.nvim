@@ -10,7 +10,9 @@ end
 
 local function insert_with_key(key,value,tbl)
     if not value then return tbl end
-    table.insert(tbl,unpack({key,value}))
+    table.insert(tbl,key)
+    table.insert(tbl,value)
+    return tbl
 end
 
 M.insert_opts = function(opts,tbl)
