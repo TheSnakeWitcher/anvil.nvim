@@ -66,11 +66,13 @@ function M.get_state()
     M.state = vim.json.decode(file_content)
 end
 
-function M.get_account(index)
+function M.get_accounts(index)
+
     if vim.tbl_isempty(M.state) then
         M.get_state()
     end
-    if not M.state then return nil end
+    if vim.tbl_isempty(M.state) then return nil end
+
 
     if not index then
         return M.state.accounts
@@ -81,9 +83,9 @@ function M.get_account(index)
 end
 
 function M.get_account_index(account_address)
-    for idx,account in ipairs(M.state.accounts) do
+    for index,account in ipairs(M.state.accounts) do
         if account == account_address then
-            return idx
+            return index
         end
     end
     return nil
