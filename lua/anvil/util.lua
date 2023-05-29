@@ -15,7 +15,7 @@ local function insert_with_key(key,value,tbl)
     return tbl
 end
 
-M.insert_opts = function(opts,tbl)
+M.insert_not_nil_opts = function(opts,tbl)
     tbl = insert_with_key(
         "--fork-url",
         opts.fork_url,
