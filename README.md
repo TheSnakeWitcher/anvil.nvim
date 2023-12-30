@@ -1,6 +1,7 @@
 # Anvil.nvim
 
 
+These plugin is now deprecated, it was moved to [foundry.nvim](https://github.com/TheSnakeWitcher/foundry.nvim).
 Small plugin to more conveniently/easily interact with
 [anvil](https://github.com/foundry-rs/foundry/tree/master/anvil) from
 [foundry](https://github.com/foundry-rs/foundry) toolkit
